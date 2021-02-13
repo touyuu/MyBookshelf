@@ -108,6 +108,17 @@ public class BookshelfHelp {
             return false;
         }
         File file = getBookFile(folderName, index, fileName);
+
+        File all = FileHelp.createFileIfNotExist(file.getParent() + File.separator + "all.txt");
+        try (BufferedWriter allWriter = new BufferedWriter(new FileWriter(all, true))) {
+            allWriter.append(fileName + "\n\n");
+            allWriter.append(content);
+            allWriter.append("\n\n");
+            allWriter.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         //获取流并存储
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
             writer.write(fileName + "\n\n");
