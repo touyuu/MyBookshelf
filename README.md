@@ -1,3 +1,6 @@
+## This repository modified the original source code, and add the ability to download whole txt of book
+
+----------------------------------------------------------------------------------------------
 # 本软件为开源软件,不要在任何地方购买!
 # 关注公众号请搜索:开源阅读,有福利噢
 # 开发
